@@ -4,7 +4,7 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
-        android:label="my_internet_speed_meter"
+        android:label="Internet Speed Checker"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
