@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import '../shared files/constants/constants.dart';
 import '../viewmodels/internet_speed_view_model.dart';
-import '../widgets/custom_loader.dart';
+import '../widgets/custom_circular_indicator.dart';
 import '../widgets/custom_loading_animation_widgets.dart';
 import '../widgets/speed_card_widget.dart';
 

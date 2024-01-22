@@ -72,7 +72,7 @@ class InternetSpeedProvider with ChangeNotifier {
           print('Error : $errorMessage ');
         }
         Utility().showErrorToast("$speedTestError - $errorMessage ");
-        setLoading(false);
+        // setLoading(false);
       },
       onDefaultServerSelectionInProgress: () {},
       onDefaultServerSelectionDone: (Client? client) {},
