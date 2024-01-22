@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import '../viewmodels/internet_speed_view_model.dart';
 
 class SpeedTestCard extends StatelessWidget {
-  const SpeedTestCard({Key? key}) : super(key: key);
+  const SpeedTestCard({super.key});
 
   @override
   Widget build(BuildContext context) {

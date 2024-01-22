@@ -5,9 +5,7 @@ import '../shared files/helper/utility.dart';
 import '../viewmodels/internet_speed_view_model.dart';
 
 class PlanCardComponent extends StatefulWidget {
-  const PlanCardComponent({
-    Key? key,
-  }) : super(key: key);
+  const PlanCardComponent({super.key});
 
   @override
   State<PlanCardComponent> createState() => _PlanCardComponentState();

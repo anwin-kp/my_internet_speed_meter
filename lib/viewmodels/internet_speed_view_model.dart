@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_internet_speed_test/flutter_internet_speed_test.dart';
+import 'package:my_internet_speed_meter/shared%20files/helper/utility.dart';
 
 class InternetSpeedProvider with ChangeNotifier {
   bool _loading = false;
@@ -46,12 +47,14 @@ class InternetSpeedProvider with ChangeNotifier {
         if (kDebugMode) {
           print('Test Started');
         }
+        setLoading(true);
       },
       onCompleted: (TestResult download, TestResult upload) {
         // You can add code here to handle what should happen when the test is completed.
         if (kDebugMode) {
           print('Download speed: ${download.transferRate} Mbps');
         }
+        setLoading(false);
         setTransferRate(0);
         setDownloadProgressPercent(0);
         setDownloadTransferRate(download.transferRate);
@@ -68,6 +71,8 @@ class InternetSpeedProvider with ChangeNotifier {
         if (kDebugMode) {
           print('Error : $errorMessage ');
         }
+        Utility().showErrorToast("$speedTestError - $errorMessage ");
+        setLoading(false);
       },
       onDefaultServerSelectionInProgress: () {},
       onDefaultServerSelectionDone: (Client? client) {},

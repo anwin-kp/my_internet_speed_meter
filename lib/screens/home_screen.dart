@@ -5,10 +5,13 @@ import 'package:provider/provider.dart';
 import '../shared files/constants/constants.dart';
 import '../viewmodels/internet_speed_view_model.dart';
 import '../widgets/custom_loader.dart';
+import '../widgets/custom_loading_animation_widgets.dart';
 import '../widgets/speed_card_widget.dart';
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({key}) : super(key: key);
+  const MyHomePage({super.key});
+
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +25,11 @@ class MyHomePage extends StatelessWidget {
               children: <Widget>[
                 const SizedBox(height: 30),
                 const PlanCardComponent(),
-                const SizedBox(height: 50),
+                const SizedBox(height: 25),
+                Visibility(
+                    visible: internetSpeedProvider.loading,
+                    child: const CustomLoadingAnimation()),
+                const SizedBox(height: 25),
                 ElevatedButton(
                   onPressed: () {
                     internetSpeedProvider.startButtonPressed();
