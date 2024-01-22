@@ -2,15 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'screens/home_screen.dart';
-import 'viewmodels/dependency_change_view_model.dart';
 import 'viewmodels/internet_speed_view_model.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => LifecycleHandler(),
-      child: const MyApp(),
-    ),
+    const MyApp(),
   );
 }
 
