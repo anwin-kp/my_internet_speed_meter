@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../shared files/utility.dart';
+import '../shared files/helper/utility.dart';
 import '../viewmodels/internet_speed_view_model.dart';
 
 class PlanCardComponent extends StatefulWidget {
